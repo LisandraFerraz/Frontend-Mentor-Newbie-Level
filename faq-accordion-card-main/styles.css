@@ -1,0 +1,275 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+
+:root {
+  --violet: #a968ea;
+  --purple: #675edf;
+  --black: #131126;
+  --white: #fff;
+  --orange: #f47b55;
+
+  --Kumbh: "Kumbh Sans", sans-serif;
+}
+html {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to bottom, var(--violet), var(--purple));
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  font-family: var(--Kumbh);
+  color: var(--black);
+}
+
+main {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.card-layout {
+  width: 1200px;
+  background-color: var(--white);
+  height: 630px;
+  border-radius: 25px;
+  overflow: hidden;
+  box-shadow: 0 16px 26px #00000065;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  position: relative;
+}
+
+.illustration {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.illustration .img-box-desktop {
+  position: fixed;
+  z-index: 2;
+  margin: 260px 0 0 -112px;
+  width: 230px;
+  height: auto;
+}
+
+.illustration .img-woman-desktop {
+  position: absolute;
+  z-index: 1;
+  margin: 80px 0 0 -110px;
+  width: 620px;
+  height: auto;
+}
+
+.img-woman-mobile {
+  display: none;
+}
+
+.illustration-assets {
+  margin: -20em 0 0 -42em;
+  width: 300px;
+  /* padding: 0 2em 80em 0; */
+  height: 100%;
+  position: relative;
+}
+
+.illustration-assets img {
+  width: 1150px;
+  height: auto;
+}
+
+.card-txt {
+  grid-column: 2;
+  grid-row: 1;
+  padding: 2em 3em;
+}
+
+.card-txt h1 {
+  font-size: 2.4rem;
+}
+
+.accordion-item {
+  border-bottom: solid 2px #00000025;
+}
+
+.accordion-head {
+  width: 100%;
+  font-weight: 700;
+  font-size: 1.1rem;
+  opacity: 60%;
+  background-color: var(--white);
+  border: none;
+  padding: 2em 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 45px;
+}
+
+.accordion-head:hover {
+  cursor: pointer;
+}
+
+.opened .accordion-head {
+  padding: 2em 0 0.5em 0;
+}
+.opened .accordion-head {
+  opacity: 90%;
+}
+
+.accordion-head img {
+  width: 16px;
+  height: auto;
+}
+
+.closed .accordion-txt {
+  height: 0;
+  transition: all 0.1s ease-out;
+  transform: scaleY(0);
+  float: left;
+  display: block;
+}
+
+.opened .accordion-txt {
+  padding: 0.2em 0;
+  width: 100%;
+  margin: 0 0 10px 0;
+  display: block;
+  transform: scaleY(1);
+  transform-origim: top;
+  transition: all 0.1s ease-out;
+  font-weight: 700;
+  opacity: 40%;
+  line-height: 25px;
+}
+
+.opened .accordion-head img {
+  transform: rotate(180deg);
+}
+
+.attribution {
+  bottom: 0;
+  position: absolute;
+  padding: 2em;
+  color: var(--white);
+  text-align: center;
+  font-size: 0.8rem;
+}
+
+.attribution a {
+  color: var(--white);
+}
+.attribution a:hover {
+  opacity: 60%;
+}
+
+@media only screen and (max-width: 1300px) {
+  .card-layout {
+    width: 1000px;
+  }
+
+  .illustration .img-box-desktop {
+    margin: 260px 0 0 -109px;
+    width: 220px;
+  }
+
+  .illustration .img-woman-desktop {
+    margin: 80px 0 0 -110px;
+    width: 600px;
+  }
+  .card-txt h1 {
+    font-size: 2rem;
+  }
+
+  .accordion-head {
+    font-size: 1rem;
+  }
+  .accordion-txt {
+    font-size: 0.95rem;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .card-layout {
+    width: 600px;
+    height: 680px;
+    margin: 160px 0 0 0;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    position: static;
+  }
+  .illustration {
+    grid-column: 1;
+    grid-row: 1;
+    height: 100px;
+  }
+  .card-txt {
+    grid-column: 1;
+    grid-row: 1;
+    margin: 8em 0 0 0;
+    padding: 2em 3em;
+  }
+  .illustration-assets img,
+  .img-box-desktop,
+  .img-woman-desktop {
+    display: none;
+  }
+  .img-woman-mobile {
+    display: block;
+    position: absolute;
+    z-index: 2;
+    width: 400px;
+    height: auto;
+    margin: -180px 0 0 95px;
+  }
+  .card-txt h1 {
+    text-align: center;
+    font-size: 2rem;
+  }
+}
+
+@media only screen and (max-width: 620px) {
+  .card-layout {
+    width: 400px;
+    height: 680px;
+    margin: 100px 0 0 0;
+  }
+  .illustration {
+    grid-column: 1;
+    grid-row: 1;
+    height: 100px;
+  }
+  .card-txt {
+    grid-column: 1;
+    grid-row: 1;
+    margin: 5em 0 0 0;
+    padding: 2em 3em;
+  }
+  .illustration-assets img,
+  .img-box-desktop,
+  .img-woman-desktop {
+    display: none;
+  }
+  .img-woman-mobile {
+    display: block;
+    position: absolute;
+    z-index: 2;
+    width: 300px;
+    height: auto;
+    margin: -140px 0 0 55px;
+  }
+  .card-txt h1 {
+    text-align: center;
+    font-size: 2rem;
+  }
+  .accordion-head {
+    text-align: left;
+    /* font-size: 2rem; */
+  }
+}
