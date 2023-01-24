@@ -1,0 +1,248 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap");
+
+:root {
+  --lavender: #a863d3;
+  --violet: #1c1938;
+  --dark-purple: #0a0c1b;
+  --purple: #8f26f9;
+  --white: #fff;
+
+  --lexend: "Lexend Deca", sans-serif;
+  --inter: "Inter", sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--dark-purple);
+  overflow: auto;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.card-wrap {
+  width: 1240px;
+  height: 500px;
+  display: grid;
+  grid-template-columns: 52% 48%;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 0 8px #00000025;
+}
+
+.card-details {
+  padding: 3em 5em;
+  grid-column: 1;
+  grid-row: 1;
+  background-color: var(--violet);
+}
+
+.card-title {
+  color: var(--white);
+  font-size: 1.3rem;
+  font-family: var(--inter);
+}
+
+.card-title span {
+  color: var(--lavender);
+}
+
+.card-cover {
+  grid-column: 2;
+  grid-row: 1;
+  position: relative;
+  background-color: blue;
+}
+
+.card-cover img {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+
+.card-txt {
+  width: 450px;
+  font-size: 1.1rem;
+  line-height: 30px;
+  color: var(--white);
+  opacity: 60%;
+  font-family: var(--lexend);
+}
+
+.transparency-cover {
+  position: absolute;
+  background-color: var(--purple);
+  height: 100%;
+  width: 100%;
+  opacity: 35%;
+}
+
+.card-stats {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  gap: 70px;
+  margin: 50px 0 0 0;
+  font-family: var(--inter);
+  color: var(--white);
+  line-height: 5px;
+}
+
+.card-stats p:first-child {
+  font-size: 2rem;
+  font-weight: 900;
+}
+
+.card-stats p:last-child {
+  font-size: 0.9rem;
+  font-weight: 400;
+  opacity: 60%;
+  text-transform: uppercase;
+}
+
+.card-cover img:last-child {
+  display: none;
+}
+
+.attribution {
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+  color: vaR(--white);
+  padding: 1em 2em;
+  font-family: var(--inter);
+}
+
+.attribution a {
+  color: var(--lavender);
+  transition: all ease 0.2s;
+}
+
+.attribution a:hover {
+  opacity: 60%;
+}
+
+@media only screen and (max-width: 1275px) {
+  .card-details {
+    justify-content: center;
+    aign-items: center;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .card-wrap {
+    width: 900px;
+    height: 480px;
+  }
+
+  .card-details {
+    padding: 2em 3em;
+  }
+
+  .card-title {
+    font-size: 1rem;
+  }
+  .card-txt {
+    width: 350px;
+    font-size: 1rem;
+  }
+  .card-stats {
+    gap: 40px;
+  }
+}
+
+@media only screen and (max-width: 930px) {
+  .card-wrap {
+    width: 600px;
+    height: 710px;
+    grid-template-columns: auto auto;
+    grid-template-rows: 300px 500px;
+    overflow: hidden;
+  }
+
+  .card-details {
+    padding: 1em 2em;
+    grid-column: 1;
+    grid-row: 2;
+    justify-content: start;
+  }
+
+  .card-title {
+    font-size: 1rem;
+    text-align: center;
+    padding: 0 7em;
+  }
+  .card-cover {
+    grid-column: 1;
+    grid-row: 1;
+  }
+  .card-cover img {
+    display: none;
+  }
+  .card-cover img:last-child {
+    display: block;
+  }
+  .card-txt {
+    width: 100%;
+    text-align: center;
+  }
+  .card-stats {
+    justify-content: center;
+    gap: 70px;
+    margin: 35px 0 0 0;
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  .card-wrap {
+    width: 430px;
+    height: fit-content;
+    grid-template-columns: auto auto;
+    grid-template-rows: 30% auto;
+  }
+
+  .card-details {
+    padding: 1em 1em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .card-title {
+    font-size: 1rem;
+    text-align: center;
+    padding: 0 2em;
+  }
+  .card-cover {
+    grid-column: 1;
+    grid-row: 1;
+  }
+  .card-cover img {
+    display: none;
+  }
+  .card-cover img:last-child {
+    display: block;
+  }
+  .card-txt {
+    width: 90%;
+    text-align: center;
+  }
+  .card-stats {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin: 30px 0 0 0;
+    text-align: center;
+  }
+  .attribution {
+    font-size: 0.8rem;
+  }
+}

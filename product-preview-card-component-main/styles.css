@@ -1,0 +1,165 @@
+@import url("https://fonts.googleapis.com/css2?family=Commissioner:wght@700;800&family=Montserrat:wght@500;700&display=swap");
+
+:root {
+  --cream: #f3eae3;
+  --dark-blue: #1c232b;
+  --dark-green: #3e7e67;
+  --white: #fff;
+}
+
+body {
+  background-color: var(--cream);
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-container {
+  display: flex;
+  width: 700px;
+  height: 520px;
+  background-color: #fff;
+  border-radius: 14px;
+  box-shadow: 0 0 4px #00000015;
+}
+
+.card-img-bg {
+  height: 100%;
+  width: 380px;
+}
+
+.card-img-bg img {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+  border-radius: 14px 0 0 14px;
+}
+
+.card-structure {
+  width: 360px;
+  padding: 30px;
+  justify-content: center;
+  /* align-items: center; */
+  display: flex;
+  flex-direction: column;
+}
+
+.product-type span {
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  color: var(--dark-blue);
+  letter-spacing: 5px;
+  opacity: 60%;
+}
+
+.card-title {
+  margin: 20px 0;
+  width: 250px;
+}
+
+.card-title span {
+  font-family: "Commissioner", sans-serif;
+  color: var(--dark-blue);
+  font-size: 2.3rem;
+  line-height: 44px;
+}
+
+.card-body span {
+  text-align: left;
+  line-height: 22px;
+  font-family: "Montserrat", sans-serif;
+  color: var(--dark-blue);
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.card-price-details {
+  margin: 45px 0;
+  display: flex;
+  gap: 25px;
+  align-items: center;
+}
+
+.card-price-details :first-child {
+  font-family: "Commissioner", sans-serif;
+  font-size: 2.5rem;
+  color: var(--dark-green);
+}
+
+.card-price-details :last-child {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+  text-decoration: line-through;
+  opacity: 50%;
+  font-weight: 700;
+}
+
+.card-footer button {
+  background-color: var(--dark-green);
+  border-radius: 12px;
+  outline: none;
+  border: none;
+  width: 100%;
+  height: 50px;
+  color: var(--white);
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  transition: ease 0.5s;
+}
+
+.card-footer button:hover {
+  opacity: 90%;
+  cursor: pointer;
+}
+
+.card-footer button img {
+  width: 18px;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  padding: 25px 0;
+  color: var(--dark-blue);
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.8rem;
+}
+
+footer a {
+  color: var(--dark-green);
+}
+
+@media only screen and (max-width: 760px) {
+  .card-container {
+    display: block;
+    width: 400px;
+    height: fit-content;
+  }
+
+  .card-img-bg {
+    height: 260px;
+    width: 100%;
+  }
+
+  .card-img-bg img {
+    border-radius: 14px 14px 0 0;
+  }
+
+  .card-structure {
+    width: auto;
+  }
+
+  .card-title {
+    width: 100%;
+  }
+}

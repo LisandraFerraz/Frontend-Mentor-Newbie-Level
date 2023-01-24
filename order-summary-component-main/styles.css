@@ -1,0 +1,189 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap");
+
+:root {
+  --white: #fff;
+  --cream: #f8f9fe;
+  --sky: #dfe7fe;
+  --sky-2: #dce4f8;
+  --dark-purple: #717fa7;
+  --dark-blue: #172447;
+  --purple: #382ae1;
+
+  --redhat: "Red Hat Display", sans-serif;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  background-color: var(--sky);
+  font-family: var(--redhat);
+}
+
+.card-wrap {
+  background-color: var(--white);
+  width: 460px;
+  height: 720px;
+  box-shadow: 0 0 8px #00000025;
+  border-radius: 25px;
+}
+
+.card-cover {
+  height: 250px;
+  width: 100%;
+}
+
+.card-cover img {
+  height: 100%;
+  width: 100%;
+  border-radius: 25px 25px 0 0;
+  object-fit: cover;
+}
+
+.card-body {
+  padding: 25px 45px;
+}
+
+.card-title h1 {
+  text-align: center;
+  color: var(--dark-blue);
+  font-weight: 900;
+}
+
+.card-txt {
+  color: var(--dark-blue);
+  text-align: center;
+  font-size: 1.2rem;
+  opacity: 60%;
+}
+
+.card-details {
+  width: 320px;
+  height: 75px;
+  align-items: center;
+  justify-content: space-between;
+  display: flex;
+  background-color: var(--cream);
+  border-radius: 15px;
+  padding: 10px 25px;
+  margin: 25px 0;
+}
+
+.card-details img {
+  width: 50px;
+  height: 50px;
+}
+.card-details :first-child {
+  align-items: center;
+  justify-content: space-between;
+  display: flex;
+  gap: 15px;
+}
+
+.details-txt {
+  line-height: 10px;
+  font-size: 1.125rem;
+  color: var(--dark-blue);
+  font-weight: 900;
+}
+
+.details-txt .price {
+  opacity: 70%;
+  font-weight: 400;
+}
+
+.card-details a {
+  color: var(--purple);
+  transition: all ease 0.1s;
+}
+
+.card-details a:hover {
+  opacity: 70%;
+  text-decoration: none;
+}
+
+.card-actions button {
+  width: 100%;
+  background-color: var(--purple);
+  border-radius: 10px;
+  height: 50px;
+  border: none;
+  outline: nonte;
+  box-shadow: 0 15px 25px #d7d4f9;
+  color: var(--white);
+  font-size: 1rem;
+  font-weight: 700;
+  transition: all ease 0.1s;
+}
+
+.card-actions button:hover {
+  opacity: 65%;
+  cursor: pointer;
+}
+
+.card-actions p {
+  color: var(--dark-blue);
+  text-align: center;
+  font-weight: 700;
+  opacity: 60%;
+  margin: 30px 0;
+  transition: all ease 0.3s;
+}
+
+.card-actions p:hover {
+  opacity: 1;
+  cursor: pointer;
+}
+
+.attribution {
+  position: absolute;
+  bottom: 0;
+  padding: 15px;
+  color: var(--dark-blue);
+  text-align: center;
+}
+
+.attribution a {
+  color: var(--purple);
+  transition: all ease 0.2s;
+}
+
+.attribution a:hover {
+  opacity: 60%;
+}
+
+@media only screen and (max-width: 520px) {
+  .card-wrap {
+    width: 350px;
+    height: 630px;
+  }
+  .card-cover {
+    height: 180px;
+    width: 100%;
+  }
+  .card-body {
+    padding: 10px 30px;
+  }
+  .card-title h1 {
+    font-size: 1.8rem;
+  }
+  .card-details {
+    width: 255px;
+    padding: 10px 20px;
+  }
+  .card-details img {
+    width: 45px;
+    height: 45px;
+  }
+  .card-details,
+  .details-txt {
+    font-size: 1rem;
+  }
+  .attribution {
+    font-size: 0.9rem;
+  }
+}
