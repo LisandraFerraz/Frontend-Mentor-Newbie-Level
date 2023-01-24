@@ -1,0 +1,255 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap");
+
+:root {
+  --turquoise: #2bb3b1;
+  --cyan: #4abebd;
+  --green: #bfdf32;
+  --black: #4d4f60;
+  --grey: #e6eff6;
+  --white: #fff;
+
+  --karla: "Karla", sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--grey);
+  height: 100vh;
+  font-family: var(--karla);
+}
+
+main {
+  position: relative;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.component-wrap {
+  width: 850px;
+  height: 620px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.top-row-content {
+  width: auto;
+  height: fit-content;
+  background-color: var(--white);
+  grid-column: 1/3;
+  grid-row: 1;
+  padding: 3em;
+}
+
+.column-content-1 {
+  width: auto;
+  height: 320px;
+  background-color: var(--turquoise);
+  grid-column: 1;
+  grid-row: 2;
+  padding: 1.8em 3em;
+}
+
+.column-content-2 {
+  width: auto;
+  height: 320px;
+  background-color: var(--cyan);
+  grid-column: 2;
+  grid-row: 2;
+  padding: 1.8em 3em;
+}
+
+.top-row-content h1 {
+  color: var(--cyan);
+  font-weight: 700;
+  letter-spacing: -1px;
+}
+
+.top-row-content h1,
+.top-row-content h5 {
+  line-height: 15px;
+}
+
+.top-row-content h5 {
+  font-size: 1.3rem;
+  color: var(--green);
+}
+
+.top-row-content p {
+  font-size: 1.2rem;
+  opacity: 60%;
+  width: 85%;
+  font-weight: 400;
+  line-height: 30px;
+  letter-spacing: -px;
+}
+
+.column-content-1 h2,
+.column-content-2 h2 {
+  color: var(--white);
+}
+.subscription-details {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--white);
+}
+.subscription-details span {
+  font-size: 1rem;
+  font-weight: 400;
+  opacity: 60%;
+}
+
+.column-content-1 p {
+  color: var(--white);
+  font-size: 1.2rem;
+}
+
+.column-content-1 button {
+  width: 100%;
+  height: 60px;
+  background-color: var(--green);
+  color: var(--white);
+  border: none;
+  outline: none;
+  border-radius: 8px;
+  box-shadow: 0 8px 16px #00000035;
+  margin: 1em 0 0 0;
+  font-size: 1.2rem;
+  transition: all ease 0.3s;
+}
+
+.column-content-1 button:hover {
+  cursor: pointer;
+  opacity: 95%;
+}
+
+.column-content-2 ul {
+  list-style: none;
+  margin: 0 -40px;
+  line-height: 30px;
+  color: var(--white);
+  opacity: 80%;
+}
+
+footer {
+  text-align: center;
+  bottom: 0;
+  position: absolute;
+  color: var(--black);
+  font-weight: 700;
+  opacity: 60%;
+  padding: 1em 2em;
+}
+
+footer a {
+  color: var(--turquoise);
+  transition: all ease 0.3s;
+}
+
+footer a:hover {
+  opacity: 80%;
+  text-decoration: none;
+}
+
+@media only screen and (max-width: 860px) {
+  body {
+    height: 100%;
+  }
+
+  main {
+    height: 100%;
+  }
+  footer {
+    bottom: 0;
+    position: relative;
+  }
+
+  .component-wrap {
+    margin: 2em 0;
+    width: 400px;
+    height: fit-content;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(auto, auto);
+  }
+
+  .top-row-content {
+    grid-column: 1/3;
+    height: 280px;
+    grid-row: 1;
+    padding: 2em;
+  }
+
+  .column-content-1 {
+    grid-column: 1/3;
+    height: 260px;
+    grid-row: 2;
+    padding: 1.8em 2em;
+  }
+
+  .column-content-2 {
+    grid-column: 1/3;
+    height: 280px;
+    grid-row: 3;
+    padding: 1.8em 2em;
+  }
+  .top-row-content h1 {
+    font-size: 1.7rem;
+  }
+  .top-row-content h5 {
+    font-size: 1.2rem;
+    line-height: 25px;
+  }
+  .top-row-content p {
+    font-size: 1rem;
+    opacity: 60%;
+    width: 100%;
+    font-weight: 400;
+    line-height: 30px;
+    letter-spacing: -px;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .component-wrap {
+    margin: 4em 0;
+    width: 320px;
+    height: fit-content;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(auto, auto);
+  }
+  .top-row-content {
+    height: 270px;
+  }
+  .column-content-1 {
+    height: 280px;
+  }
+  .top-row-content h1 {
+    font-size: 1.7rem;
+  }
+  .top-row-content h5 {
+    font-size: 1.2rem;
+    line-height: 25px;
+  }
+  .top-row-content p {
+    font-size: 1rem;
+    line-height: 25px;
+  }
+  .column-content-1 button {
+    height: 50px;
+    font-size: 1rem;
+  }
+  .column-content-1 p {
+    font-size: 1.1rem;
+  }
+  .column-content-2 ul {
+    font-size: 1rem;
+  }
+}
