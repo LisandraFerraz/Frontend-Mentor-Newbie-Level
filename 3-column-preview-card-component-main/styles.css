@@ -1,0 +1,218 @@
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap");
+
+:root {
+  --dark-green: #043333;
+  --green: #00403f;
+  --light-green: #1bb498;
+
+  --dark-turquoise: #01565a;
+  --turquoise: #016972;
+  --light-turquoise: #29b5bf;
+
+  --dark-orange: #b56a1e;
+  --orange: #e28525;
+  --light-orange: #fed26e;
+
+  --grey: #f2f2f2;
+  --white: #fff;
+
+  --shoulders: "Big Shoulders Display", cursive;
+  --lexaend: "Lexend Deca", sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--grey);
+}
+
+main {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.template-wrapper {
+  width: 1350px;
+  height: 800px;
+  display: grid;
+  grid-template-columns: repeat(3, 450px);
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.template-orange {
+  background-color: var(--orange);
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.template-turquoise {
+  background-color: var(--turquoise);
+  grid-column: 2;
+  grid-row: 1;
+}
+
+.template-green {
+  background-color: var(--green);
+  grid-column: 3;
+  grid-row: 1;
+}
+
+.template {
+  padding: 2em 4rem;
+  color: var(--white);
+  position: relative;
+}
+
+.template-top {
+  padding: 4em 0;
+}
+
+.template-top img {
+  width: 100px;
+  height: auto;
+}
+
+.template-top h1 {
+  font-family: var(--shoulders);
+  font-size: 3.5rem;
+  text-transform: uppercase;
+}
+
+.template-txt {
+  font-family: var(--lexaend);
+  font-size: 1.25rem;
+  line-height: 36px;
+  opacity: 70%;
+  padding: 0 25px 0 0;
+  margin: -50px 0;
+}
+
+button {
+  bottom: 0;
+  position: absolute;
+  margin: 80px 0;
+  height: 70px;
+  width: 250px;
+  border-radius: 50px;
+  border: none;
+  outline: none;
+  font-size: 1.3rem;
+  font-weight: 700;
+  transition: all ease 0.3s;
+}
+
+button:hover {
+  background-color: transparent;
+  border: 3px solid var(--white);
+  cursor: pointer;
+}
+
+.template-orange button {
+  color: var(--orange);
+}
+.template-orange button:hover {
+  color: var(--white);
+}
+
+.template-turquoise button {
+  color: var(--turquoise);
+}
+.template-turquoise button:hover {
+  color: var(--white);
+}
+
+.template-green button {
+  color: var(--green);
+}
+.template-green button:hover {
+  color: var(--white);
+}
+
+.attribution {
+  bottom: 0;
+  position: absolute;
+  text-align: center;
+  color: var(--green);
+  padding: 1.2em 2em;
+  font-family: var(--lexaend);
+  font-size: 0.9rem;
+}
+
+.attribution a {
+  color: var(--turquoise);
+  transition: all ease 0.2s;
+}
+
+.attribution a:hover {
+  opacity: 80%;
+}
+
+@media only screen and (max-width: 1440px) {
+  .template-wrapper {
+    width: 1024px;
+    height: 760px;
+    grid-template-columns: repeat(3, 341px);
+  }
+  .template-txt {
+    margin: -65px 0;
+    padding: 0;
+  }
+  .template {
+    padding: 2em 3rem;
+  }
+  button {
+    height: 60px;
+    width: 240px;
+    font-size: 1.2rem;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  main {
+    height: 100%;
+  }
+  .template-wrapper {
+    margin: 8em 0;
+    width: 460px;
+    height: fit-content;
+    display: block;
+    border-radius: 15px;
+  }
+  .template {
+    height: 520px;
+    padding: 2em 3em;
+  }
+  .template-top {
+    padding: 2em 0;
+  }
+  button {
+    margin: 80px 0 40px 0;
+  }
+  .template-txt {
+    margin: -45px 0;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .template-wrapper {
+    margin: 8em 0;
+    width: 380px;
+  }
+  .template {
+    height: 520px;
+    padding: 2em 3em;
+  }
+  button {
+    width: 180px;
+    font-size: 1.1rem;
+  }
+  .template-txt {
+    margin: -45px 0;
+    font-size: 1.1rem;
+  }
+}

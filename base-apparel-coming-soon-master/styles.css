@@ -1,0 +1,233 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap");
+
+:root {
+  --maroon: #42393a;
+  --rose: #cdacae;
+  --light-rose: #dbcbcc;
+  --pink: #ed9699;
+  --light-pink: #f7b2b2;
+  --shade1-pink: #f6b6b6;
+  --cream: #fdf9f7;
+
+  --josefin: "Josefin Sans", sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 60% 40%;
+  overflow-x: hidden;
+  background-image: url("./images/bg-pattern-desktop.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.content-section {
+  grid-column: 1;
+  /* height: 100vh; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 10% 0 10%;
+}
+
+.top-section {
+  position: absolute;
+  top: 0;
+  padding: 3rem;
+}
+
+.body-section {
+  display: flex;
+  position: absolute;
+  top: 2rem;
+  bottom: 0;
+  padding: 0 0 0 3rem;
+  flex-direction: column;
+  justify-content: center;
+  /* overflow: hidden; */
+}
+
+.title-section {
+  text-transform: uppercase;
+  font-weigth: 300;
+  letter-spacing: 20px;
+  line-height: 55px;
+}
+
+.title-section :first-child {
+  font-size: 4rem;
+  font-family: var(--josefin);
+  color: var(--rose);
+}
+
+.title-section :last-child {
+  font-family: var(--josefin);
+  font-size: 4rem;
+  color: var(--maroon);
+}
+
+.content-body {
+  width: 580px;
+}
+
+.content-body span {
+  font-size: 1.35rem;
+  font-family: var(--josefin);
+  font-weight: 300;
+  line-height: 32px;
+  color: var(--rose);
+}
+
+.input-email form {
+  margin: 30px 0 0 0;
+  display: flex;
+  align-items: center;
+}
+
+.input-email input {
+  width: 100%;
+  height: 55px;
+  position: relative;
+  border-radius: 50px;
+  border: solid 1px var(--rose);
+  outline: none;
+  padding: 0 25px;
+  background-color: transparent;
+}
+
+.input-email input::placeholder,
+.input-email input {
+  font-size: 1rem;
+  color: var(--rose);
+  font-family: var(--josefin);
+}
+
+#errorIcon {
+  margin-left: -170px;
+  z-index: 1;
+}
+
+.errorMsg {
+  margin: 10px 10px 0 20px;
+}
+
+.errorMsg span {
+  font-size: 1rem;
+  color: #f96464;
+  font-weight: 700;
+}
+
+.input-email button {
+  z-index: 1;
+  height: 55px;
+  width: 130px;
+  margin-left: 30px;
+  border-radius: 50px;
+  border: none;
+  background: linear-gradient(
+    to left,
+    var(--pink),
+    var(--light-pink),
+    var(--shade1-pink)
+  );
+  box-shadow: 0 0 8px var(--shade1-pink);
+  transition: all ease 0.3s;
+}
+
+.input-email button:hover {
+  box-shadow: 0 0 18px var(--shade1-pink);
+  opacity: 60%;
+  cursor: pointer;
+}
+
+.input-email button img {
+  margin: 14px 0;
+}
+
+.attribution {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 15px 0;
+  width: 45%;
+  text-align: center;
+  font-family: var(--josefin);
+  color: var(--rose);
+}
+
+.attribution a {
+  color: var(--maroon);
+  transition: all ease 0.3s;
+}
+
+.attribution a:hover {
+  opacity: 80%;
+}
+
+.illustration {
+  background-image: url("./images/hero-desktop.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+}
+
+.template-section {
+  grid-column: 2;
+  height: 100vh;
+}
+.template-section img {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+.hide {
+  visibility: hidden;
+}
+
+@media only screen and (max-width: 1115px) {
+  body {
+    display: block;
+    background-color: var(--cream);
+    background-image: url("");
+  }
+
+  .content-section {
+    padding: 0 2%;
+  }
+
+  .illustration {
+    background-image: url("./images/hero-mobile.jpg");
+    height: 450px;
+    margin: 130px 0 0 0;
+  }
+  .content-body {
+    width: fit-content;
+    padding-right: 2.5rem;
+  }
+  .top-section {
+    padding: 3rem 1rem 0;
+  }
+  .body-section {
+    padding: 0 0 0 3rem;
+    top: 50rem;
+  }
+  .input-email input {
+    width: 80%;
+  }
+  .input-email button {
+    z-index: 1;
+    margin-left: 20px;
+  }
+  .attribution {
+    width: 80%;
+    /* position: absolute; */
+  }
+  .template-section img {
+    object-fit: cover;
+  }
+}
