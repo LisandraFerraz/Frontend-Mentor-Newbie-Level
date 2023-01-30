@@ -1,0 +1,346 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap");
+
+:root {
+  --blackish: #49556d;
+  --grey: #edf2f8;
+  --white: #fff;
+  --manrope: "Manrope", sans-serif;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: var(--grey);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: vaR(--blackish);
+  font-family: var(--manrope);
+}
+
+main {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-wrap {
+  width: 1200px;
+  height: fit-content;
+  background-color: var(--white);
+  display: grid;
+  grid-template-columns: repeat(2, 40% 60%);
+  grid-template-rows: repeat(1, auto);
+  /* overflow: hidden; */
+  border-radius: 1em;
+  box-shadow: 0 16px 16px #00000010;
+  position: relative;
+}
+
+.card-cover {
+  border-radius: 1em 0 0 1em;
+  overflow: hidden;
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.card-cover img {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+
+.card-txt {
+  margin: 2em 3em;
+  grid-column: 2;
+  grid-row: 1;
+  height: 100%;
+}
+
+.card-txt h1 {
+  font-size: 2.2rem;
+}
+
+.card-txt p {
+  font-size: 1.3rem;
+  font-weight: 700;
+  opacity: 60%;
+  line-height: 30px;
+}
+
+.card-details {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+.pfp-details {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+}
+
+.pfp-details img {
+  height: 84px;
+  width: auto;
+  border-radius: 100px;
+}
+
+.profile-details {
+  line-height: 1px;
+}
+
+.profile-details h5 {
+  /* opacity: 80%; */
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+.profile-details h6 {
+  font-weight: 700;
+  font-size: 1rem;
+  opacity: 60%;
+}
+
+.share-toggle {
+  background-color: var(--grey);
+  padding: 0.6em;
+  border-radius: 100px;
+}
+
+.share-toggle:hover {
+  cursor: pointer;
+}
+
+.share-toggle img {
+  height: 18px;
+  width: auto;
+}
+
+#shareOpts {
+  position: absolute;
+  right: -4.5em;
+  bottom: 8em;
+  border-radius: 0.6em;
+  box-shadow: 0 8px 8px #00000025;
+  display: flex;
+  flex-direction: row;
+  gap: 1em;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--blackish);
+  width: 280px;
+  height: 0;
+  overflow: hidden;
+  transition: height ease-out 0.2s;
+}
+
+#shareOpts div:first-child {
+  display: flex;
+  flex-direction: row;
+  gap: 1em;
+  align-items: center;
+  justify-content: center;
+}
+
+#shareOpts span {
+  color: var(--grey);
+  opacity: 80%;
+  text-transform: uppercase;
+  letter-spacing: 0.4em;
+}
+
+#shareOpts.active {
+  height: 60px;
+}
+
+#active-toggle {
+  display: none;
+}
+
+.attribution {
+  padding: 1em 2em;
+  color: var(--blackish);
+}
+
+.attribution a {
+  color: var(--blackish);
+  transition: all ease 0.2s;
+}
+
+.attribution a:hover {
+  opacity: 60%;
+}
+
+@media only screen and (max-width: 1360px) {
+  .card-wrap {
+    width: 1000px;
+  }
+}
+
+@media only screen and (max-width: 1250px) {
+  .card-wrap {
+    width: 760px;
+  }
+  .card-txt h1 {
+    font-size: 1.3rem;
+  }
+  .card-txt p {
+    font-size: 1rem;
+  }
+
+  .pfp-details img {
+    height: 64px;
+  }
+  .profile-details h5 {
+    font-size: 1rem;
+  }
+
+  .profile-details h6 {
+    font-size: 0.8rem;
+  }
+  .share-toggle {
+    padding: 0.5em;
+  }
+  .share-toggle img {
+    height: 15px;
+    width: auto;
+  }
+  #shareOpts {
+    right: -4em;
+    bottom: 7em;
+    width: 250px;
+  }
+  #shareOpts span {
+    font-size: 0.8rem;
+  }
+
+  #shareOpts.active {
+    height: 54px;
+  }
+  .attribution {
+    font-size: 0.8rem;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .card-cover {
+    border-radius: 0;
+    grid-column: 1;
+    grid-row: 1;
+    height: 360px;
+  }
+
+  .card-txt {
+    margin: 2em 0 0 0;
+    grid-column: 1;
+    grid-row: 2;
+    height: 300px;
+  }
+  .card-txt-content {
+    margin: auto 3em;
+  }
+  .card-wrap {
+    width: 600px;
+    height: fit-content;
+    grid-template-columns: repeat(1, auto);
+    grid-template-rows: repeat(2, auto);
+    overflow: hidden;
+  }
+  .card-details {
+    margin: 0 3em;
+  }
+
+  #shareOpts {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    border-radius: 0;
+    box-shadow: none;
+    border-radius: 0;
+    width: 100%;
+  }
+  #shareOpts.active {
+    height: 90px;
+    margin: 0;
+  }
+
+  #shareOpts {
+    display: flex;
+    gap: 9em;
+    justify-content: space-evenly;
+  }
+
+  #shareOpts div:first-child {
+    display: flex;
+    gap: 1.2em;
+    align-items: center;
+  }
+
+  #shareOpts div:first-child img {
+    height: auto;
+    width: 30px;
+  }
+
+  #shareOpts span {
+    opacity: 60%;
+    font-size: 1.2rem;
+    padding-right: 1em;
+  }
+  #active-toggle {
+    display: block;
+  }
+}
+
+@media only screen and (max-width: 630px) {
+  .card-cover {
+    height: 320px;
+  }
+
+  .card-txt {
+    margin: 2em 0 0 0;
+    grid-column: 1;
+    grid-row: 2;
+    height: 360px;
+  }
+  .card-txt-content {
+    margin: auto 3em;
+  }
+  .card-wrap {
+    width: 460px;
+  }
+  .card-details {
+    margin: 0 3em;
+  }
+
+  #shareOpts {
+    gap: 2em;
+  }
+
+  #shareOpts div:first-child {
+    display: flex;
+    gap: 1.2em;
+    align-items: center;
+  }
+
+  #shareOpts div:first-child img {
+    width: 25px;
+  }
+
+  #shareOpts span {
+    font-size: 1rem;
+  }
+  #active-toggle {
+    display: block;
+  }
+}
