@@ -1,0 +1,149 @@
+@import url("https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@100;300;600;700&display=swap");
+
+:root {
+  --blue: #4d7bf3;
+  --dark-blue: #161e29;
+  --red: #d23442;
+  --franklin: "Libre Franklin", sans-serif;
+  --grey: #cfd5e5;
+  --white: #fff;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  /* height: 100%; */
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+  font-family: var(--franklin);
+}
+
+.top-icon {
+  padding: 2em 0 1em 0;
+  text-align: center;
+}
+
+.title {
+  text-align: center;
+}
+.title h1 {
+  font-weight: 100;
+}
+
+.title h1 span {
+  font-weight: 700;
+}
+.title h4 {
+  font-weight: 300;
+}
+
+.input-area {
+  margin: 2em 0;
+}
+
+.input-area form {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 1em;
+}
+
+.input-area input {
+  height: 50px;
+  width: 430px;
+  padding: 0 2em;
+  border: 1px solid var(--grey);
+  border-radius: 50px;
+  font-size: 1rem;
+  outline: none;
+}
+
+.input-area input::placeholder {
+  color: var(--grey);
+}
+
+.input-area button {
+  width: 180px;
+  height: 50px;
+  border-radius: 50px;
+  border: none;
+  outline: none;
+  background-color: var(--blue);
+  color: var(--white);
+  font-size: 1rem;
+  box-shadow: 0 5px 8px #00000020;
+  transition: all ease 0.2s;
+}
+
+.input-area button:hover {
+  opacity: 80%;
+  cursor: pointer;
+}
+
+.errorMsg {
+  color: var(--red);
+  padding-left: 2em;
+  font-style: italic;
+  font-weight: 600;
+  font-size: 0.8rem;
+  opacity: 60%;
+}
+
+.illustration {
+  margin: 4em 0;
+}
+
+.illustration img {
+  width: 700px;
+  height: auto;
+}
+
+.bottom-content {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  text-align: center;
+}
+.bottom-content p {
+  color: var(--grey);
+}
+
+input.errorSubmit {
+  border-color: var(--red);
+}
+
+@media only screen and (max-width: 730px) {
+  main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .input-area form {
+    flex-direction: column;
+    align-items: center;
+  }
+  .input-area button {
+    width: 490px;
+  }
+  .illustration img {
+    width: 500px;
+    height: auto;
+  }
+}
+
+@media only screen and (max-width: 530px) {
+  .input-area input {
+    width: 300px;
+  }
+  .input-area button {
+    width: 360px;
+  }
+  .illustration img {
+    width: 420px;
+    height: auto;
+  }
+}

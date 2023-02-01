@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Frontend Mentor | Ping coming soon page</title>
+  </head>
+  <body>
+    <main>
+      <div class="top-icon">
+        <img src="images/logo.svg" alt="" />
+      </div>
+      <div class="title">
+        <h1>We are launching <span>soon!</span></h1>
+        <h4>Subscribe and get notified</h4>
+      </div>
+      <div class="input-area">
+        <form onsubmit="return validateForm()">
+          <input
+            type="text"
+            class="emailInput"
+            id="email"
+            placeholder="Your email adress..."
+          />
+          <button onclick="validateForm()">Notify Me</button>
+        </form>
+        <p class="errorMsg" id="errorMsg"></p>
+      </div>
+      <div class="illustration">
+        <img
+          src="images/illustration-dashboard.png"
+          alt="illustration Dashboard"
+        />
+      </div>
+      <div class="bottom-content">
+        <p>&copy Ping. All rights reserved.</p>
+        <!-- <p class="attribution">
+          Challenge by
+          <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+            >Frontend Mentor</a
+          >. Coded by <a href="#">Your Name Here</a>.
+        </p> -->
+      </div>
+    </main>
+  </body>
+
+  <script src="script.js"></script>
+</html>
