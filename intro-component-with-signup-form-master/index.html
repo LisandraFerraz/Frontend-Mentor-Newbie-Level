@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Frontend Mentor | Intro component with sign up form</title>
+  </head>
+  <body>
+    <main>
+      <div class="body-wrap">
+        <div class="content-txt">
+          <h1>Learn to code by watching others</h1>
+          <p>
+            See how experienced developers solve problems in real-time. Watching
+            scripted tutorials is great, but understanding how developers think
+            is invaluable.
+          </p>
+        </div>
+        <div class="form-content">
+          <div class="top-message">
+            <span>Try it free 7 days </span> then $20/mo. thereafter
+          </div>
+          <div class="form-container">
+            <form onsubmit="return validateForm()">
+              <input type="text" placeholder="First Name" id="name" />
+              <p class="msgError" id="name-error"></p>
+              <input type="text" placeholder="Last Name" id="surname" />
+              <p class="msgError" id="surname-error"></p>
+              <input type="text" placeholder="Email Adress" id="email" />
+              <p class="msgError" id="email-error"></p>
+              <input type="password" placeholder="Password" id="password" />
+              <p class="msgError" id="pass-error"></p>
+              <button onclick="validateForm()">claim your free trial</button>
+              <p class="bottom-msg">
+                By clicking the button, you are agreeing to our
+                <span>Terms and Services</span>
+              </p>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <div class="attribution">
+        <p>
+          Challenge by
+          <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+            >Frontend Mentor</a
+          >. Coded by
+          <a
+            href="https://www.frontendmentor.io/profile/LisandraFerraz"
+            target="_blank"
+            >Lisandra Ferraz</a
+          >.
+        </p>
+      </div>
+    </main>
+  </body>
+  <script src="script.js"></script>
+</html>
